@@ -187,7 +187,7 @@ In release builds, a failed assertion prints the message and **spins forever** (
 
 **Iterator post-increment is deleted on `threadSafe::iterator`.** The `shared_lock` cannot be copied into a by-value return. Use `++it`.
 
-** The library uses `new` and `delete` operators in the file rawPointer.hpp. If you need to use an allocaotr of your own, just edit the allocate
+The library uses `new` and `delete` operators in the file rawPointer.hpp. If you need to use an allocaotr of your own, just edit the allocate
 and deallocate functions in the RawPointer to use your allocator
 ---
 
@@ -195,15 +195,7 @@ and deallocate functions in the RawPointer to use your allocator
 
 The library is header-only. Include the headers you need
 
-Compile with C++17 or later and link with pthreads when using `threadSafe::` containers:
-
-```sh
-g++ -std=c++17 -I path/to/containers your_file.cpp -pthread -o your_program
-```
-
-```sh
-g++ -std=c++17 -I path/to/containers your_file.cpp -pthread -o your_program
-```
+Compile with C++17 or later and link with pthreads when using `threadSafe::` containers
 
 ---
 
