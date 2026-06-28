@@ -48,7 +48,6 @@ The most distinctive feature of this library. Every indexed container returns `I
 
 ```cpp
 basic::IndexedDynamicArray<Player, uint32> players;
-
 auto playerIdx  = players.insert(Player{"Alice"});
 auto enemyArr   = basic::IndexedDynamicArray<Enemy, uint32>{};
 auto enemyIdx   = enemyArr.insert(Enemy{});
@@ -175,6 +174,9 @@ In release builds, a failed assertion prints the message and **spins forever** (
 
 ## Things to know before you use this
 
+**The library uses `new` and `delete` operators in the file rawPointer.hpp. If you need to use an allocaotr of your own, just edit the allocate
+and deallocate functions in the RawPointer to use your allocator, this is the ONLY place in the whole lib where allocation/deallocation happens**
+
 **`erase(T)` on `IndexedDynamicArray` removes the first match only**, not all matching elements. This differs from the comment in some earlier versions of the header. If you need to remove all matches, iterate and erase by `Index`.
 
 **`BinarySearchTree` is unbalanced.** Inserting sorted data degenerates to O(n). Use `AVLTree` when insertion order is not controlled.
@@ -187,8 +189,6 @@ In release builds, a failed assertion prints the message and **spins forever** (
 
 **Iterator post-increment is deleted on `threadSafe::iterator`.** The `shared_lock` cannot be copied into a by-value return. Use `++it`.
 
-The library uses `new` and `delete` operators in the file rawPointer.hpp. If you need to use an allocaotr of your own, just edit the allocate
-and deallocate functions in the RawPointer to use your allocator
 ---
 
 ## Building
