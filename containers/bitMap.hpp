@@ -28,7 +28,7 @@
 // BitMap<T, sizeType, bitLength>
 //
 // A compact boolean array where each element takes only one bit.
-// Backed by a basic::DynamicArray<T, sizeType> where T is typically uint64.
+// Backed by a basic::DynamicArray<T, sizeType>
 // Bit i lives at mData[i / bitLength] at bit position (i % bitLength).
 // ─────────────────────────────────────────────────────────────────────────────
 
