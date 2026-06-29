@@ -204,22 +204,22 @@ Compile with C++17 or later and link with pthreads when using `threadSafe::` con
 Each container has a standalone example in the `examples/` directory. Every example compiles with:
 
 ```sh
-g++ -std=c++17 -I path/to/containers examples/example_NAME.cpp -pthread -o example_NAME
+g++ -std=c++17 -I path/to/containers examples/ex_NAME.cpp -pthread -o example_NAME
 ```
 
 | File | Covers |
 |---|---|
-| `example_dynamicArray.cpp` | pushBack, erase, find, resize, reserve, wrap, copy, move, iteration |
-| `example_staticArray.cpp` | fixed capacity, setSize, inline storage, thread-safe concurrent push |
-| `example_hybridArray.cpp` | inline-first growth, tier-crossing erase, cross-type copy |
-| `example_indexedDynamicArray.cpp` | stable handles, free-list reuse, typed Index safety, sparse iteration |
-| `example_indexedStaticArray.cpp` | caller-chosen slots, bitmap occupancy, find by Index |
-| `example_stack.cpp` | push, pop, top, indexed access, bottom-to-top iteration |
-| `example_queue.cpp` | push with Index return, FIFO pop, erase by value, task dispatch pattern |
-| `example_sortedArray.cpp` | O(1) min/max, duplicate rejection, priority-like usage |
-| `example_hashMap.cpp` | insert/find/erase, operator[], key() accessor, rehash stress |
-| `example_BSTree.cpp` | leaf/one-child/two-child erase, in-order successor strategy |
-| `example_AVLTree.cpp` | sequential insert safety, all four rotation types, guaranteed O(log n) |
-| `example_bitMap.cpp` | toggleOn/Off, packed storage, entity active-flag pattern |
-| `example_string.cpp` | SSO, heap path, concatenation, self-append, toString free functions |
-| `example_iterator.cpp` | all iterator patterns: range-for, reverse, unlock/lock, sparse containers |
+| `ex_dynamicArray.cpp` | pushBack, erase, find, resize, reserve, wrap, copy, move, iteration |
+| `ex_staticArray.cpp` | fixed capacity, setSize, inline storage, thread-safe concurrent push |
+| `ex_hybridArray.cpp` | inline-first growth, tier-crossing erase, cross-type copy |
+| `ex_indexedDynamicArray.cpp` | stable handles, free-list reuse, typed Index safety, sparse iteration |
+| `ex_indexedStaticArray.cpp` | caller-chosen slots, bitmap occupancy, find by Index |
+| `ex_stack.cpp` | push, pop, top, indexed access, bottom-to-top iteration |
+| `ex_queue.cpp` | push with Index return, FIFO pop, erase by value, task dispatch pattern |
+| `ex_sortedArray.cpp` | O(1) min/max, duplicate rejection, priority-like usage |
+| `ex_hashMap.cpp` | insert/find/erase, operator[], key() accessor, rehash stress |
+| `ex_BSTree.cpp` | leaf/one-child/two-child erase, in-order successor strategy |
+| `ex_AVLTree.cpp` | sequential insert safety, all four rotation types, guaranteed O(log n) |
+| `ex_bitMap.cpp` | toggleOn/Off, packed storage, entity active-flag pattern |
+| `ex_string.cpp` | SSO, heap path, concatenation, self-append, toString free functions |
+| `ex_iterator.cpp` | all iterator patterns: range-for, reverse, unlock/lock, sparse containers |
